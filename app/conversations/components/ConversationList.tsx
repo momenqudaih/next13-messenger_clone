@@ -10,11 +10,11 @@ import { FullConversationType } from '@/app/types';
 import useConversation from '@/app/hooks/useConversation';
 import ConversationBox from './ConversationBox';
 
-interface ConversationsListProps {
+interface ConversationListProps {
     initialItems: FullConversationType[];
 }
 
-const ConversationsList = ({ initialItems }: ConversationsListProps) => {
+const ConversationList = ({ initialItems }: ConversationListProps) => {
     const [items, setItems] = useState(initialItems);
 
     const router = useRouter();
@@ -60,4 +60,4 @@ const ConversationsList = ({ initialItems }: ConversationsListProps) => {
     );
 };
 
-export default ConversationsList;
+export default ConversationList;

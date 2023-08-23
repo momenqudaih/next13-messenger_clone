@@ -1,6 +1,6 @@
 import getConversations from '../actions/getConversations';
 import Sidebar from '../components/sidebar/Sidebar';
-import ConversationsList from './components/ConversationsList';
+import ConversationList from './components/ConversationList';
 
 export default async function ConversationsLayout({
     children,
@@ -12,7 +12,7 @@ export default async function ConversationsLayout({
     return (
         <Sidebar>
             <div className="h-full">
-                <ConversationsList initialItems={conversations} />
+                <ConversationList initialItems={conversations} />
                 {children}
             </div>
         </Sidebar>
