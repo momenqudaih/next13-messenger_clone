@@ -4,7 +4,7 @@ const getMessages = async (conversationId: string) => {
     try {
         const messages = await prisma.message.findMany({
             where: {
-                conversationId,
+                conversationId: conversationId,
             },
             include: {
                 sender: true,
