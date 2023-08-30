@@ -60,6 +60,7 @@ const SettingsModal = ({
             })
             .finally(() => {
                 setIsLoading(false);
+                toast.success('Profile updated successfully!');
             });
     };
 

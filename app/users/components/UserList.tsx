@@ -28,7 +28,7 @@ const UserList = ({ item }: UserListProps) => {
             <div className="px-5">
                 <div className="flex-col">
                     <div className="text-2xl font-bold text-neutral-500 py-4">
-                        Users
+                        People
                     </div>
                 </div>
                 {item.map((user) => (

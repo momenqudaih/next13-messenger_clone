@@ -32,6 +32,7 @@ const ConfirmModal = ({ isOpen, onClose }: ConfirmModalProps) => {
             })
             .finally(() => {
                 setIsLoading(false);
+                toast.success('Conversation deleted!');
             });
     }, [conversationId, router]);
 

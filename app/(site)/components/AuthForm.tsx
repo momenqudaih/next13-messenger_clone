@@ -52,7 +52,10 @@ const AuthForm = () => {
             axios.post('/api/register', data).then(() =>
                 signIn('credentials', { ...data })
                     .catch(() => toast.error('Something went wrong!'))
-                    .finally(() => setIsLoading(false)),
+                    .finally(() => {
+                        setIsLoading(false);
+                        toast.success('Registered successfully!');
+                    }),
             );
         }
         if (variant === 'LOGIN') {
@@ -116,7 +119,7 @@ const AuthForm = () => {
                         disabled={isLoading}
                     />
                     <div>
-                        <Button disabled={isLoading} fullwidth type="submit">
+                        <Button disabled={isLoading} fullWidth type="submit">
                             {variant === 'LOGIN' ? 'Login' : 'Register'}
                         </Button>
                     </div>
